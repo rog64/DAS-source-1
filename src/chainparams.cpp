@@ -128,6 +128,7 @@ public:
 		vSeeds.push_back(CDNSSeedData("node1.lpool.name", "46.101.171.245"));
 		vSeeds.push_back(CDNSSeedData("node2.lpool.name", "46.101.136.245"));
 		vSeeds.push_back(CDNSSeedData("node3.lpool.name", "207.154.223.205"));
+		vSeeds.push_back(CDNSSeedData("hexpool.com", "185.137.97.24"));
 
 
         // Das addresses start with 'D'
