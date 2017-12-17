@@ -142,7 +142,7 @@ public:
         // Das BIP32 prvkeys start with 'dprv'
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0xFD)(0xA4)(0xEA).convert_to_container<std::vector<unsigned char> >();
         // Das BIP44 coin type is '5'
-        base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80000005);
+        base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80000005).convert_to_container<std::vector<unsigned char> >();
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
         fMiningRequiresPeers = true;
@@ -158,7 +158,7 @@ public:
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
             (  0, uint256S("0x00000a55dce11803cfa87cfab4498cba41ffe2acca8e3cda2b48e633c69fd84c"))
-			(  20282, uint256S("0x0000000000089ac18dd60904abddf2345fbe7632b94b8a243646124a656a0055")),
+			(  16281, uint256S("0x0000000000089ac18dd60904abddf2345fbe7632b94b8a243646124a656a0055")),
             1500983175, // * UNIX timestamp of last checkpoint block
             20282,    // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
@@ -234,7 +234,7 @@ public:
         // Testnet das BIP32 prvkeys start with 'DPRV'
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x3A)(0x58)(0xF3)(0x42).convert_to_container<std::vector<unsigned char> >();
         // Testnet das BIP44 coin type is '5' (All coin's testnet default)
-        base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80000001);
+        base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80000001).convert_to_container<std::vector<unsigned char> >();
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
 
         fMiningRequiresPeers = true;
